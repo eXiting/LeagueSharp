@@ -59,7 +59,7 @@ namespace Fake_Server_Messages
       }
       if (args.Message.StartsWith(".sender"))
       {
-        sender = args.Message.Substring(args.Message.IndexOf(" ") + 1);
+        sender = args.Message.Substring(args.Message.IndexOf(" ") + 1);
         args.Process = false;
       }
       if (args.Message.StartsWith(".all 1"))
@@ -76,17 +76,17 @@ namespace Fake_Server_Messages
       }
       if (args.Message.StartsWith(".msg"))
       {
-        var fakemsg = args.Message.Substring(args.Message.IndexOf(" ") + 1);
+        var fakemsg = args.Message.Substring(args.Message.IndexOf(" ") + 1);
         if (allX == true)
         {
-          var message = string.Format("/all {0}{1}  {2}  {3}", premsg, new string('-', 45 + sender.Length), sender, fakemsg);
+          var message = string.Format("/all {0}{1}  {2}  {3}", premsg, new string(' ', 45 + sender.Length), sender, fakemsg);
           Game.Say(message);
           args.Process = false;
 
         }
         else if (allX == false)
         {
-          var message = string.Format("     {0}{1}  {2}  {3}", premsg, new string('-', 50 + sender.Length), sender, fakemsg);
+          var message = string.Format("     {0}{1}  {2}  {3}", premsg, new string(' ', 50 + sender.Length), sender, fakemsg);
           Game.Say(message);
           args.Process = false;
 
